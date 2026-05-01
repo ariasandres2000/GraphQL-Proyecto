@@ -44,6 +44,34 @@ const schema = buildSchema(`
     
     }
 
+    type MessageFrom {
+    
+        name: String
+        lastName: String
+
+    }
+
+    type Message {
+    
+        id: String
+        content: String
+        fromUserId: String
+        toUserId: String
+        from: MessageFrom
+        creationDate: String
+
+    }
+
+    type QuestionThread{
+    
+        vehicle: Vehicle
+        messages: [Message]
+        lastMessage: Message
+        pendingReply: Boolean
+        asker: User
+
+    }
+
     type Query {
     
         vehicles(
@@ -65,6 +93,12 @@ const schema = buildSchema(`
         me: User
 
         myVehicles: [Vehicle]
+
+        questionThread(vehicleId: String!, askerId: String): [Message]
+
+        questionsAsked:[QuestionThread]
+
+        questionsReceived: [QuestionThread]
 
     }
 `);
