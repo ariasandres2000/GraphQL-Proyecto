@@ -1,5 +1,6 @@
 const { buildSchema } = require('graphql');
 
+// Schema de GraphQL.
 const schema = buildSchema(`
     
     type Owner {
