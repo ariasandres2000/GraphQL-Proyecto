@@ -48,3 +48,5 @@ La interfaz visual GraphiQL está disponible en esa misma URL.
 Incluir el token JWT en el header de cada petición:
 
 El mismo token generado por el REST API funciona aquí.
+
+<img width="1467" height="736" alt="Progra final diagrama" src="https://github.com/user-attachments/assets/314037aa-9fc5-43b0-8cbf-a57f6c4c34b2" />
